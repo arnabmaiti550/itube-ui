@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="site-logo">iTube</div> </div>
+        <div class="nav-center">
+            <form action="#" method="get" class="search-form">
+                <input type="text" class="search-input" placeholder="Search">
+                <button type="submit" class="search-button" aria-label="Search">
+                    <span class="search-icon">&#x1F50D;</span> </button>
+            </form>
+        </div>
+        <div class="nav-right">
+            <div class="channel-logo">SJ</div> </div>
+        
+    </header>
+
+    <main class="container">
+        <h2>Upload Your Video</h2>
+        <div class="upload-form" id="uploadForm">
+            
+            <div class="form-group">
+                <label for="video-title">Video Title</label>
+                <input type="text" id="video-title" name="video-title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="video-description">Video Description</label>
+                <textarea id="video-description" name="video-description" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="video-thumbnail">Choose Thumbnail</label>
+                <input type="file" id="video-thumbnail" name="video-thumbnail" accept="image/png, image/jpeg, image/gif">
+            </div>
+
+            <div class="form-group">
+                <label for="video-file">Choose Video File</label>
+                <input type="file" id="videoFile" name="video-file" accept="video/mp4, video/webm, video/ogg" required>
+            </div>
+
+            <button type="submit" class="uploadButton">Upload Video</button>
+        </div>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
