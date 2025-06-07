@@ -52,6 +52,28 @@ searchInput.addEventListener('keyup' , function() {
                     div.textContent = suggestion.title;
                     div.onclick = function() {
                         searchInput.value = suggestion.title;
+                        vidsec.innerHTML=``
+                        str=`<article class="video-container">
+        <a href="http://localhost:3000${suggestion.videoUrl}" class="thumbnail" data-duration="12:24">
+          <img class="thumbnail-image" src="http://localhost:3000${suggestion.thumbnailUrl}" />
+        </a>
+        <div class="video-bottom-section">
+          <a href="#">
+            <img class="channel-icon" src="http://unsplash.it/36/36?gravity=center" />
+          </a>
+          <div class="video-details">
+            <a href="#" class="video-title">${suggestion.title}</a>
+            <a href="#" class="video-channel-name">Channel Name</a>
+            <div class="video-metadata">
+              <span>12K views</span>
+              •
+              <span>1 week ago</span>
+            </div>
+          </div>
+        </div>
+      </article>`;
+      vidsec.innerHTML=str
+
                         suggestionsContainer.innerHTML = ''; 
                         filterdata(); 
                     };
