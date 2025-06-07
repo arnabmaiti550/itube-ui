@@ -1,6 +1,6 @@
 .body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f9f9f9; /* YouTube-like light gray background */
   color: #0f0f0f; /* Default text color (dark gray/black) */
 }
@@ -67,26 +67,26 @@
   background-color: #f0f0f0;
 }
 #suggestions {
-            /* border: 1px solid #ccc; */
-            max-height: 150px;
-            overflow-y: auto;
-            background-color: white;
-            position: absolute; 
-            width: calc(100% - 42px); 
-            z-index: 1000; 
-        }
+  /* border: 1px solid #ccc; */
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+  position: absolute;
+  width: calc(100% - 42px);
+  z-index: 1000;
+}
 #suggestions div {
-            padding: 8px;
-            cursor: pointer;
+  padding: 8px;
+  cursor: pointer;
 }
 #suggestions div:hover {
-            background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .menu-icons {
   display: flex;
   align-items: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .menu-icons img {
@@ -101,53 +101,6 @@
   width: 32px;
 }
 
-/* Categories Bar Styling */
-.categories {
-  padding: 10px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  position: sticky;
-  top: 61px; /* Height of the header, adjust if header padding changes */
-  z-index: 999;
-  overflow-x: auto; /* Allow horizontal scrolling for categories */
-  white-space: nowrap; /* Prevent categories from wrapping */
-}
-
-/* Hide scrollbar for categories but allow scrolling */
-.categories::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
-.categories {
-  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
-  scrollbar-width: none;  /* For Firefox */
-}
-
-
-.category-section {
-  display: flex;
-  gap: 12px;
-}
-
-.category {
-  padding: 6px 12px;
-  font-size: 14px;
-  background-color: #f0f0f0;
-  border: 1px solid #d3d3d3;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.category:hover {
-  background-color: #e0e0e0;
-}
-
-.category.active {
-  background-color: #0f0f0f;
-  color: #ffffff;
-  border-color: #0f0f0f;
-}
-
 /* Videos Grid Styling */
 .videos {
   padding: 20px;
@@ -155,7 +108,10 @@
 
 .video-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
   gap: 20px 16px; /* Row and column gap */
   margin-bottom: 30px;
 }
@@ -203,7 +159,8 @@
   object-fit: cover; /* Cover the area without distorting */
 }
 
-.thumbnail::after { /* For video duration */
+.thumbnail::after {
+  /* For video duration */
   content: attr(data-duration);
   position: absolute;
   bottom: 8px;
@@ -226,19 +183,19 @@
   height: 36px;
   border-radius: 50%;
   margin-right: 12px;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .video-details {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; 
-  overflow: hidden; 
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .video-title {
   font-size: 16px;
-  font-weight: 500; 
+  font-weight: 500;
   color: #0f0f0f;
   margin-bottom: 4px;
   display: -webkit-box;
@@ -251,7 +208,7 @@
 .video-channel-name,
 .video-metadata {
   font-size: 14px;
-  color: #606060; 
+  color: #606060;
 }
 
 .video-channel-name {
@@ -262,11 +219,11 @@
 }
 
 .video-metadata span {
-  display: inline-block; 
+  display: inline-block;
 }
 
 .video-metadata span:first-child::after {
-  content: " •"; 
+  content: " •";
   margin: 0 4px;
 }
 
@@ -287,7 +244,7 @@
     flex-grow: 1;
     margin: 0 10px;
   }
-  
+
   .menu-icons {
     gap: 15px;
   }
@@ -296,13 +253,12 @@
   }
   .categories {
     padding: 8px 15px;
-    top: 57px; 
+    top: 57px;
   }
   .videos {
     padding: 15px;
   }
   .video-section {
-    
     grid-template-columns: 1fr;
     gap: 15px;
   }
@@ -316,12 +272,10 @@
 }
 
 @media (max-width: 480px) {
-  
-   .search-input {
+  .search-input {
     font-size: 14px;
   }
   .search-btn img {
     height: 18px;
   }
-  
 }
