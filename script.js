@@ -1,6 +1,8 @@
 import axios from 'axios';
 
 const uploadButton = document.querySelector(".uploadButton");
+const popupOverlay = document.getElementById("popupOverlay");
+const goToHomeButton = document.querySelector(".go-home-button");
 
 uploadButton.addEventListener("click", async () => {
   console.log("uploadButton");
@@ -33,7 +35,12 @@ uploadButton.addEventListener("click", async () => {
         }
   });
     console.log(response.data);
+    popupOverlay.classList.add("active");
   } catch (error) {
     console.error(error);
   }
-})
+});
+
+goToHomeButton.addEventListener("click", () => {
+ window.location.href = "http://localhost:5174/yt.html"; 
+});
