@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="player.css">
+    <title>iTube - Now Playing</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="index.html">
+              <img src="images/logo.png" alt="iTube Logo" class="youtube-logo" />
+            </a>
+        </div>
+        <div class="nav-center">
+            <form action="#" method="get" class="search-form">
+                <input type="text" class="search-input" placeholder="Search">
+                <button type="submit" class="search-button" aria-label="Search">
+                    <img src="images/search.png" alt="Search">
+                </button>
+            </form>
+        </div>
+        <div class="nav-right">
+            <a href="upload.html">
+              <img src="images/upload.png" alt="Upload Video" class="upload-icon" />
+            </a>
+            <div class="channel-logo">SJ</div> 
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="player-content-container">
+            <!-- Video Player will be loaded here -->
+            <video id="video-player" class="video-player" controls autoplay muted>
+                <!-- Add muted to allow autoplay in most browsers -->
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Video Details -->
+            <div id="player-details" class="player-details">
+                <h1 id="video-title-placeholder">Loading title...</h1>
+                <p id="video-desc-placeholder">Loading description...</p>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <h3>Comments</h3>
+
+                <form id="comment-form">
+                    <input type="text" id="usernameInput" placeholder="Your name" required>
+                    <textarea id="commentInput" placeholder="Add a comment..." required></textarea>
+                    <button type="submit" id="comment">Comment</button>
+                </form>
+
+                <div id="comments-list">
+                  
+                    <!-- Comments will be injected here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="player.js"></script>
+</body>
+</html>

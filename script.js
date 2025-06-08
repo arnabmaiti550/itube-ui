@@ -43,9 +43,9 @@ uploadButton.addEventListener("click", async () => {
 });
 
 goToHomeButton.addEventListener("click", () => {
- window.location.href = "http://localhost:5174/yt.html"; 
+ window.location.href = "http://localhost:5173/index.html"; 
 });
 
 siteLogo.addEventListener("click", () => {
- window.location.href = "http://localhost:5174/yt.html"; 
+ window.location.href = "http://localhost:5173/index.html"; 
 });

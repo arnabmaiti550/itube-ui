@@ -1,0 +1,224 @@
+/* General Body and Font styles to match other pages */
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Reusable Navbar/Header (copied from style.css for consistency) --- */
+.navbar {
+  background-color: #ffffff;
+  padding: 0 24px;
+  height: 56px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left .youtube-logo {
+  height: 44px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.nav-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
+  max-width: 728px;
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+}
+
+.search-form .search-input {
+  flex-grow: 1;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  outline: none;
+}
+.search-form .search-input:focus {
+  border-color: #1c62b9;
+}
+
+.search-form .search-button {
+  width: 64px;
+  height: 40px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-form .search-button img {
+    height: 20px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-right .upload-icon {
+    height: 32px;
+}
+.nav-right .channel-logo {
+  width: 36px;
+  height: 36px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* --- Main Player Page Container --- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.player-content-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.video-player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    border-radius: 12px;
+}
+
+.player-details h1 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.player-details p {
+    font-size: 16px;
+    color: #606060;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.comments-section {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.comments-section h3 {
+    margin-bottom: 20px;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#comment-form input,
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+#comment-form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+#comment-form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #ef0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#comment-form button:hover {
+    opacity: 0.8;
+}
+
+.comment {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.comment-body .username {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+
+#comments-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#username {
+  border-top: 1px solid #000000;
+  padding-left: 20px;
+  font-size: 30px;
+  padding-top: 5px;
+  margin-top: 10px;
+}
+
+#text {
+  border-top: 1px solid #e7e7e7;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
